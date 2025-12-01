@@ -11,7 +11,7 @@ import { contactSchema } from "@/schemas/contactSchema"
 import { useContact } from "@/hooks/useContact"
 import { toast } from "sonner"
 
-import ContactType from "@/types/contactType";
+import { ContactType } from "@/types/contactType";
 
 export default function ContactSection() {
   const initialValues = {
@@ -21,14 +21,13 @@ export default function ContactSection() {
     message: "",
   }
 
-  const { send } = useContact()
+  const { send, error } = useContact();
 
 
     const handleSubmit = async (
-    values: ContactType,
-    helpers: FormikHelpers<ContactType>
+    values: typeof initialValues,
+    { resetForm, setSubmitting }: { resetForm: () => void; setSubmitting: (v: boolean) => void }
     ) => {
-        const { resetForm, setSubmitting } = helpers;
         const { data, error } = await send(values)
 
         if (error) {
