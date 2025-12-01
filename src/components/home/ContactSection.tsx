@@ -11,8 +11,6 @@ import { contactSchema } from "@/schemas/contactSchema"
 import { useContact } from "@/hooks/useContact"
 import { toast } from "sonner"
 
-import { ContactType } from "@/types/contactType";
-
 export default function ContactSection() {
   const initialValues = {
     name: "",
@@ -28,15 +26,14 @@ export default function ContactSection() {
     values: typeof initialValues,
     { resetForm, setSubmitting }: { resetForm: () => void; setSubmitting: (v: boolean) => void }
     ) => {
-        const { data, error } = await send(values)
+        const ok = await send(values);
 
-        if (error) {
-        toast.error("No se pudo enviar el mensaje. Inténtalo de nuevo.")
+        if (ok) {
+            toast.success("Mensaje enviado. ¡Gracias por contactarme!")
+            resetForm()
         } else {
-        toast.success("Mensaje enviado. ¡Gracias por contactarme!")
-        resetForm()
+            toast.error("No se pudo enviar el mensaje. Inténtalo de nuevo.")
         }
-
         setSubmitting(false)
     }
 

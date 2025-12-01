@@ -1,5 +1,5 @@
-import axios, { AxiosError } from "axios";
-import { ContactType, ContactResponse } from "@/types/contactType";
+import axios from "axios";
+import { ContactType } from "@/types/contactType";
 
 const BASE_URL =
   process.env.NODE_ENV === "development"
@@ -9,24 +9,14 @@ const BASE_URL =
 const ROUTE = `${BASE_URL}/api/contact`;
 
 export const contactService = {
-  create: async (con: ContactType): Promise<{
-    data: ContactResponse | null;
-    error: string | null;
-  }> => {
+  create: async (con: ContactType): Promise<{ ok: boolean; error: string | null }> => {
     try {
-      const res = await axios.post<ContactResponse>(ROUTE, con);
+      const res = await axios.post(ROUTE, con);
 
-      return {
-        data: res.data,
-        error: null,
-      };
-    } catch (err) {
-      const axiosError = err as AxiosError;
+      return { ok: res.status >= 200 && res.status < 300, error: null };
 
-      return {
-        data: null,
-        error: axiosError.message,
-      };
+    } catch (err: unknown) {
+      return { ok: false, error: "Error al enviar el formulario" };
     }
   },
 };

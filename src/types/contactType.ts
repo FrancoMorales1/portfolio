@@ -4,10 +4,3 @@ export interface ContactType {
   subject: string;
   message: string;
 }
-
-export interface ContactResponse {
-  success: boolean;
-  message: string;
-  data?: any;
-  errors?: string[];
-}

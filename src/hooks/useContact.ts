@@ -1,23 +1,20 @@
 import { useState } from "react";
 import { contactService } from "@/services/contactService";
-import { ContactType, ContactResponse } from "@/types/contactType";
+import { ContactType } from "@/types/contactType";
 
 export const useContact = () => {
-  const [data, setData] = useState<ContactResponse | null>(null);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState<boolean>(false);
 
   const send = async (payload: ContactType) => {
     setLoading(true);
+    const res = await contactService.create(payload);
 
-    const { data, error } = await contactService.create(payload);
-
-    setData(data);
-    setError(error);
+    setError(res.error);
     setLoading(false);
 
-    return { data, error };
+    return res.ok;
   };
 
-  return { send, data, error, loading };
+  return { send, loading, error };
 };
