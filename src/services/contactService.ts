@@ -4,7 +4,7 @@ import { ContactType, ContactResponse } from "@/types/contactType";
 const BASE_URL =
   process.env.NODE_ENV === "development"
     ? "http://localhost:3000"
-    : "";
+    : "https://portfolio-npg63vrm6-francomorales0001-5459s-projects.vercel.app/";
 
 const ROUTE = `${BASE_URL}/api/contact`;
 
