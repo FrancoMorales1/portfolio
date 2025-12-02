@@ -7,31 +7,38 @@ import { ExternalLink, Github } from "lucide-react"
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "Plataforma de comercio electrónico completa con carrito, pagos y gestión de inventario",
-    technologies: ["Next.js", "Stripe", "PostgreSQL", "Tailwind CSS"],
-    github: "https://github.com",
-    demo: "https://demo.com",
+    title: "Números Quiniela",
+    description: "Página simple para ver números de la Quiniela.",
+    technologies: ["Next.js", "Tailwind CSS", "Supabase"],
+    github: "https://github.com/FrancoMorales1/quiniela",
+    demo: "https://quiniela-rust.vercel.app/",
   },
   {
-    title: "Task Management App",
-    description: "Aplicación de gestión de tareas con colaboración en tiempo real",
-    technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
-    github: "https://github.com",
-    demo: "https://demo.com",
+    title: "PokeNextJS",
+    description: "Aplicación educativa para ver información de pokemones.",
+    technologies: ["Next.js", "MaterialUI", "MongoDB", "TanstackQuery", "Gsap"],
+    github: "https://github.com/FrancoMorales1/FrancoMoralesSistemasDistribuidos",
+    demo: "https://francomoralessistemasdistribuidos.onrender.com/",
   },
   {
-    title: "Analytics Dashboard",
-    description: "Dashboard de analíticas con visualización de datos en tiempo real",
-    technologies: ["Next.js", "Chart.js", "Supabase", "TypeScript"],
-    github: "https://github.com",
-    demo: "https://demo.com",
+    title: "TinZip",
+    description: "Página web para comprimir archivos, encriptarlos y compartirlos con enlace + clave.",
+    technologies: ["Next.js", "Tailwind CSS", "MongoDB"],
+    github: "https://github.com/FrancoMorales1/TinZip",
+    demo: "",
+  },
+  {
+    title: "KipuBankV3",
+    description: "Smart contract DeFi del curso de ethkipu.",
+    technologies: ["Solidity"],
+    github: "https://github.com/FrancoMorales1/KipuBankV3",
+    demo: "https://sepolia.etherscan.io/address/0x0b23726dfFbBC4E67a9dEb0Ec8aEBdb3e46fb23d",
   },
 ]
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="w-full min-h-screen flex items-center py-24 md:py-32">
+    <section id="projects" className="w-full min-h-screen flex items-center py-24 md:py-32 bg-muted/50">
       <div className="mx-auto max-w-5xl">
         <h2 className="text-3xl font-bold mb-12 text-center">Proyectos</h2>
 
