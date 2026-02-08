@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { Code2, Rocket, Users, Brain, Languages, ShieldCheck, Database, Cpu } from "lucide-react"
+import { Code2, Rocket, Users, Brain, ShieldCheck } from "lucide-react"
 
 export default function AboutSection() {
   const skills = [

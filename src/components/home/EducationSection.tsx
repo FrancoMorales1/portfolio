@@ -35,7 +35,7 @@ export default function EducationSection() {
             <CardContent className="text-muted-foreground space-y-4">
               <p>Actualmente cursando <strong className="text-foreground">5.º año</strong> con graduación estimada en <strong className="text-foreground">2026</strong>.</p>
               <p className="italic border-l-2 border-primary/30 pl-4 py-1">
-                Tesis: "Aplicación de técnicas de Deep Learning para la detección automática de vulnerabilidades en Smart Contracts sobre tecnología blockchain Ethereum."
+                Tesis: &quot;Aplicación de técnicas de Deep Learning para la detección automática de vulnerabilidades en Smart Contracts sobre tecnología blockchain Ethereum.&quot;
               </p>
               <div className="flex gap-8 pt-2">
                 <div>
