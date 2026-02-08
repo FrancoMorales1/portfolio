@@ -39,7 +39,7 @@ const projects = [
     description: "Portfolio personal desarrollado con Next.js.",
     technologies: ["Next.js"],
     github: "https://github.com/FrancoMorales1/portfolio.git",
-    demo: "https://francomoralesdev.vercel.app/",
+    demo: "https://portfolio-inky-eta-kms72k5mrf.vercel.app/",
   },
   {
     title: "OverReaction",
