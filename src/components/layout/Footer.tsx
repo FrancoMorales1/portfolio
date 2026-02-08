@@ -11,7 +11,6 @@ export default function Footer() {
           <div className="text-xl font-bold tracking-tighter">
             Franco<span className="text-primary">Morales</span>
           </div>
-
           <div className="flex items-center gap-6">
             <a 
               href="https://github.com/FrancoMorales1" 
