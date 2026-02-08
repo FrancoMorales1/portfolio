@@ -11,7 +11,6 @@ export default function EducationSection() {
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           
-          {/* Carrera principal */}
           <Card className="col-span-1 md:col-span-2 lg:col-span-3">
             <CardHeader>
               <div className="flex items-center gap-3">
@@ -20,23 +19,22 @@ export default function EducationSection() {
               </div>
             </CardHeader>
             <CardContent className="text-muted-foreground">
-              <p>Actualmente cursando <strong>4.º año</strong>.</p>
+              <p>Actualmente cursando <strong>5.º año</strong>.</p>
               <p>Graduación estimada: <strong>2026</strong>.</p>
-
+              <p>Tesis: <strong>"Aplicación de técnicas de Deep Learning para la detección automática de vulnerabilidades en Smart Contracts sobre tecnología blockchain Ethereum."</strong></p>
               <div className="flex gap-6 mt-4">
                 <div>
                   <p className="text-sm">Promedio sin aplazos</p>
-                  <p className="font-semibold">7.71</p>
+                  <p className="font-semibold">7.80</p>
                 </div>
                 <div>
                   <p className="text-sm">Promedio con aplazos</p>
-                  <p className="font-semibold">7.56</p>
+                  <p className="font-semibold">7.67</p>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          {/* Certificado */}
           <Card>
             <CardHeader>
               <div className="flex items-center gap-3">
@@ -46,7 +44,21 @@ export default function EducationSection() {
             </CardHeader>
             <CardContent>
               <p className="text-sm text-muted-foreground">
-                EthKipu – <strong>Ethereum Developer Pack</strong>
+                ETH Kipu – <strong>Ethereum Developer Pack</strong>
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <div className="flex items-center gap-3">
+                <Award className="h-6 w-6 text-primary" />
+                <CardTitle className="text-lg">Certificación</CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground">
+                Cyfrin Updraft – <strong>Certification: Blockchain Basics</strong>
               </p>
             </CardContent>
           </Card>

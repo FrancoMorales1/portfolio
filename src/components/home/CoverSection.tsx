@@ -5,7 +5,7 @@ export default function CoverSection() {
   return (
     <section className="w-full min-h-screen flex items-center py-24 md:py-32">
       <div className="mx-auto max-w-3xl text-center">
-        <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6 text-balance">Software Engineer</h1>
+        <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6 text-balance">Ingeniero en Informática</h1>
         <p className="text-lg text-muted-foreground mb-8 text-pretty">
           En la búsqueda constante de desafios.<br />
           Apasionado por la creación de soluciones tecnológicas que ayuden a las personas.

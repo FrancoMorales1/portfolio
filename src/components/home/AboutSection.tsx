@@ -13,9 +13,9 @@ export default function AboutSection() {
                         <div className="p-3 bg-primary/10 rounded-lg">
                         <Code2 className="h-8 w-8 text-primary" />
                         </div>
-                        <h3 className="font-semibold">Desarrollo Full Stack</h3>
+                        <h3 className="font-semibold">Aprendizaje rápido</h3>
                         <p className="text-sm text-muted-foreground">
-                        Experiencia en frontend y backend con tecnologías modernas
+                        Facilidad para adaptarme a nuevas tecnologías y lenguajes de programación
                         </p>
                     </div>
                     </CardContent>

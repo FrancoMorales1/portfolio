@@ -8,21 +8,21 @@ import { ExternalLink, Github } from "lucide-react"
 const projects = [
   {
     title: "Números Quiniela",
-    description: "Página simple para ver números de la Quiniela.",
+    description: "Página web para ver números de la Quiniela.",
     technologies: ["Next.js", "Tailwind CSS", "Supabase"],
     github: "https://github.com/FrancoMorales1/quiniela",
     demo: "https://quiniela-rust.vercel.app/",
   },
   {
     title: "PokeNextJS",
-    description: "Aplicación educativa para ver información de pokemones.",
+    description: "Página web educativa.",
     technologies: ["Next.js", "MaterialUI", "MongoDB", "TanstackQuery", "Gsap"],
     github: "https://github.com/FrancoMorales1/FrancoMoralesSistemasDistribuidos",
     demo: "https://francomoralessistemasdistribuidos.onrender.com/",
   },
   {
     title: "TinZip",
-    description: "Página web para comprimir archivos, encriptarlos y compartirlos con enlace + clave.",
+    description: "Página web para comprimir, encriptar y compartir archivos.",
     technologies: ["Next.js", "Tailwind CSS", "MongoDB"],
     github: "https://github.com/FrancoMorales1/TinZip",
     demo: "",
@@ -34,6 +34,27 @@ const projects = [
     github: "https://github.com/FrancoMorales1/KipuBankV3",
     demo: "https://sepolia.etherscan.io/address/0x0b23726dfFbBC4E67a9dEb0Ec8aEBdb3e46fb23d",
   },
+  {
+    title: "Portfolio",
+    description: "Portfolio personal desarrollado con Next.js.",
+    technologies: ["Next.js"],
+    github: "https://github.com/FrancoMorales1/portfolio.git",
+    demo: "https://francomoralesdev.vercel.app/",
+  },
+  {
+    title: "OverReaction",
+    description: "Juego diseñado para la GGJ 2026, con Unity.",
+    technologies: ["Unity"],
+    github: "https://github.com/FrancoMorales1/Overreaction.git",
+    demo: "https://globalgamejam.org/games/2026/over-reaction-2",
+  },
+  {
+    title: "TradingBot",
+    description: "Software diseñado para trading de criptomonedas.",
+    technologies: ["Python"],
+    github: "https://github.com/FrancoMorales1/trading.git",
+    demo: "",
+  }
 ]
 
 export default function ProjectsSection() {

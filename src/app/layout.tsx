@@ -4,6 +4,7 @@ import "./globals.css";
 
 import { Toaster } from "sonner";
 import Header from "@/components/layout/Header";
+import Footer from '@/components/layout/Footer';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,8 +32,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-          {children}
-          <Toaster richColors position="top-right" />
+        {children}
+        <Toaster richColors position="top-right" />
+        <Footer />
       </body>
     </html>
   );
