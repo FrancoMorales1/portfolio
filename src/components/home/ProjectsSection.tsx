@@ -60,41 +60,60 @@ const projects = [
 export default function ProjectsSection() {
   return (
     <section id="projects" className="w-full min-h-screen flex items-center py-24 md:py-32 bg-muted/50">
-      <div className="mx-auto max-w-5xl">
-        <h2 className="text-3xl font-bold mb-12 text-center">Proyectos</h2>
+      <div className="mx-auto max-w-5xl px-4">
+        <h2 className="text-3xl font-bold mb-12 text-center tracking-tight">Proyectos</h2>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
-          {projects.map((project, index) => (
-            <Card key={index} className="flex flex-col">
-              <CardHeader>
-                <CardTitle className="text-xl">{project.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="flex-1 flex flex-col">
-                <p className="text-sm text-muted-foreground mb-4 flex-1">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech) => (
-                    <Badge key={tech} variant="secondary" className="text-xs">
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-                <div className="flex gap-2">
-                  <Button size="sm" variant="outline" asChild className="flex-1 bg-transparent">
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">
-                      <Github className="mr-2 h-4 w-4" />
-                      Código
-                    </a>
-                  </Button>
-                  <Button size="sm" asChild className="flex-1">
-                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Demo
-                    </a>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+          {projects.map((project, index) => {
+            // Verificamos si existe el link de la demo
+            const hasDemo = project.demo && project.demo.trim() !== "";
+
+            return (
+              <Card key={index} className="flex flex-col bg-background/60 backdrop-blur-sm border-none shadow-sm transition-all hover:shadow-md">
+                <CardHeader>
+                  <CardTitle className="text-xl">{project.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-1 flex flex-col">
+                  <p className="text-sm text-muted-foreground mb-4 flex-1">
+                    {project.description}
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.technologies.map((tech) => (
+                      <Badge key={tech} variant="secondary" className="text-[10px] uppercase tracking-wider">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+
+                  <div className="flex gap-2">
+                    {/* Botón de GitHub: Siempre activo según tu lista */}
+                    <Button size="sm" variant="outline" asChild className="flex-1 bg-transparent border-primary/20 hover:bg-primary/5">
+                      <a href={project.github} target="_blank" rel="noopener noreferrer">
+                        <Github className="mr-2 h-4 w-4" />
+                        Código
+                      </a>
+                    </Button>
+
+                    {/* Botón de Demo: Condicional */}
+                    {hasDemo ? (
+                      <Button size="sm" asChild className="flex-1">
+                        <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="mr-2 h-4 w-4" />
+                          Demo
+                        </a>
+                      </Button>
+                    ) : (
+                      <Button size="sm" disabled className="flex-1 opacity-50 cursor-not-allowed">
+                        <ExternalLink className="mr-2 h-4 w-4" />
+                        No Disponible
+                      </Button>
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>
