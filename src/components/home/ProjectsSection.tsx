@@ -48,13 +48,6 @@ const projects = [
     github: "https://github.com/FrancoMorales1/Overreaction.git",
     demo: "https://globalgamejam.org/games/2026/over-reaction-2",
   },
-  {
-    title: "TradingBot",
-    description: "Software diseñado para trading de criptomonedas.",
-    technologies: ["Python"],
-    github: "https://github.com/FrancoMorales1/trading.git",
-    demo: "",
-  }
 ]
 
 export default function ProjectsSection() {
@@ -77,7 +70,7 @@ export default function ProjectsSection() {
                   <p className="text-sm text-muted-foreground mb-4 flex-1">
                     {project.description}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.technologies.map((tech) => (
                       <Badge key={tech} variant="secondary" className="text-[10px] uppercase tracking-wider">

@@ -11,6 +11,9 @@ export default function Header() {
           <Link href="/#about" className="text-sm font-medium transition-colors hover:text-primary">
             Sobre mí
           </Link>
+          <Link href="/#experience" className="text-sm font-medium transition-colors hover:text-primary">
+            Experiencia
+          </Link>
           <Link href="/#education" className="text-sm font-medium transition-colors hover:text-primary">
             Educación
           </Link>
