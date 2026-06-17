@@ -15,6 +15,11 @@ export default function EducationSection() {
       name: "Certification: Blockchain Basics",
       link: "https://profiles.cyfrin.io/u/francomorales0001/achievements/blockchain-basics",
     },
+    {
+      issuer: "Certificación de Idioma",
+      name: "Certificate of Language Proficiency",
+      link: "/certificates/certificate-language-proficiency.pdf",
+    }
   ]
 
   return (
@@ -23,7 +28,7 @@ export default function EducationSection() {
         <h2 className="text-3xl font-bold mb-12 text-center tracking-tight">Educación y Certificaciones</h2>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          
+
           {/* Tarjeta de Ingeniería - Ocupa todo el ancho en desktop */}
           <Card className="col-span-1 md:col-span-2 lg:col-span-3 bg-background/60 backdrop-blur-sm border-none shadow-sm">
             <CardHeader>
@@ -64,9 +69,9 @@ export default function EducationSection() {
                   <p className="text-sm text-muted-foreground">
                     {cert.issuer} – <strong className="text-foreground">{cert.name}</strong>
                   </p>
-                  <a 
-                    href={cert.link} 
-                    target="_blank" 
+                  <a
+                    href={cert.link}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-xs font-medium text-primary hover:underline group"
                   >

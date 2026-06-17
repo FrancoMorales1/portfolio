@@ -14,13 +14,6 @@ const projects = [
     demo: "https://quiniela-rust.vercel.app/",
   },
   {
-    title: "PokeNextJS",
-    description: "Página web educativa.",
-    technologies: ["Next.js", "MaterialUI", "MongoDB", "TanstackQuery", "Gsap"],
-    github: "https://github.com/FrancoMorales1/FrancoMoralesSistemasDistribuidos",
-    demo: "https://francomoralessistemasdistribuidos.onrender.com/",
-  },
-  {
     title: "TinZip",
     description: "Página web para comprimir, encriptar y compartir archivos.",
     technologies: ["Next.js", "Tailwind CSS", "MongoDB"],

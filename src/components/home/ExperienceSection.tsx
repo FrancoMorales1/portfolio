@@ -3,6 +3,16 @@ import { Briefcase, MapPin, CalendarDays } from "lucide-react"
 
 const experiences = [
   {
+    role: "Freelance Software Developer (Open to Opportunities)",
+    company: "Autónomo · Profesional independiente",
+    period: "Ene. 2026 — Actualidad",
+    location: "Mar del Plata, Buenos Aires, Argentina · En remoto",
+    bullets: [
+      "Desarrollo de soluciones de software a medida para clientes independientes.",
+      "Disponible para proyectos freelance y oportunidades de empleo en remoto.",
+    ],
+  },
+  {
     role: "Ayudante Alumno Adscripto",
     company: "Universidad Nacional de Mar del Plata",
     period: "Marzo 2026 — Actualidad",
