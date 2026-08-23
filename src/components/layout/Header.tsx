@@ -20,6 +20,9 @@ export default function Header() {
           <Link href="/#projects" className="text-sm font-medium transition-colors hover:text-primary">
             Proyectos
           </Link>
+          <Link href="/blog" className="text-sm font-medium transition-colors hover:text-primary">
+            Blog
+          </Link>
         </nav>
       </div>
     </header>
