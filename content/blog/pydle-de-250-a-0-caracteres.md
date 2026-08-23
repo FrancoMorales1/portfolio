@@ -4,13 +4,13 @@ date: "2026-08-23"
 excerpt: "Un juego de acertijos en Python me llevó por el camino clásico del code golf... y después por uno bastante menos clásico: hackear el propio intérprete."
 ---
 
-Hace poco descubrí [Pydle](https://pydle.net), un juego de acertijos donde tenés que escribir código en Python para recrear un patrón de colores en una grilla de 5×5, usando una única función: `pydle(x, y, icono, color)`.
+Hace poco descubrí [Pydle](https://pydle.net), un juego de acertijos donde tenés que escribir código en Python para recrear un patrón de colores en una grilla de 5×5, usando una función única: `pydle(x, y, icono, color)`.
 
-La regla es simple: cada acertijo tiene un límite de **250 caracteres**. Yo me puse una regla propia, mucho más entretenida: llegar a cada patrón con la menor cantidad de caracteres posible. Esto es el recorrido completo, de lo prolijo a lo absurdo.
+La regla es simple: cada acertijo tiene un límite de **250 caracteres**. Inspirado por creadores de contenido que ví en mi infancia como [ymfah](https://www.youtube.com/@ymfah) decidí imponerme una regla personal mas desafiante: llegar a cada patrón con la menor cantidad de caracteres posibles.
 
 ## Primeros patrones: aprendiendo el terreno
 
-Al principio, cada acertijo era una excusa para probar una herramienta distinta del lenguaje. Nada de golf todavía, solo entender qué forma de escribir Python se llevaba mejor con este tipo de problema.
+Al principio, cada acertijo era una excusa para probar una herramienta distinta del lenguaje.
 
 Bucles anidados con `match` para separar filas:
 
@@ -107,7 +107,7 @@ pydle(3, 2, "△", b)
 pydle(1, 0, "▽", a)
 ```
 
-Funcional, legible, y completamente alejado de los 250 caracteres. El código real empezó cuando decidí dejar de escribir para mí y empezar a escribir para el contador de caracteres.
+Funcional pero para nada optimizado. El código real empezó cuando decidí dejar de escribir para mí y empezar a escribir para el contador de caracteres.
 
 ## El desafío de los 250
 
@@ -135,7 +135,7 @@ Una sola línea. Un entero gigante haciendo de estructura de datos. En ese punto
 
 ## Cuando dejé de resolver el acertijo y empecé a resolver el intérprete
 
-Después de la compresión a nivel de bits quería llevar el límite todavía más lejos, y ahí noté algo: el script se ejecutaba de forma demasiado fluida en el navegador para estar viajando a un servidor. Eso significaba que el intérprete de Python corría **localmente**, en el cliente.
+No me parecía suficiente aun. Quería completar el puzzle en "0 caracteres". Entonces noté algo: el script se ejecutaba de forma demasiado fluida en el navegador para estar viajando a un servidor. Eso significaba que el intérprete de Python corría **localmente**, en el cliente.
 
 Si el intérprete vive en mi navegador, ¿por qué limitarme a escribirle instrucciones? ¿Y si en cambio modificaba el entorno de ejecución para que resolviera el acertijo de forma implícita?
 
@@ -190,8 +190,8 @@ La pieza importante es el `HOOK`. En vez de tocar `pydle()` directamente, parche
 3. Llama directamente a `w.pydle(...)` para cada una de las 25 celdas, dibujando el patrón desde *afuera* de cualquier lógica que yo hubiera escrito.
 4. Devuelve un `StringIO` normal para no romper nada más del motor.
 
-El resultado: un editor vacío, **0 caracteres**, patrón resuelto. Por supuesto, esto no es una solución "real" al acertijo — es un ejercicio de curiosidad sobre cómo vive el intérprete dentro del navegador y qué tan lejos se puede llegar si en vez de jugar el juego, se juega con el motor que lo corre.
+El resultado: un editor vacío, **0 caracteres** y patrón resuelto.
 
 ## Cierre
 
-Lo que más me gustó de este recorrido no fue llegar a 0 caracteres, fue el camino: cada etapa obligó a pensar el problema con una herramienta distinta — control de flujo, estructuras de datos, teoría de la información, y finalmente introspección del propio runtime (`sys._getframe`, monkeypatching sobre `io`). Ese último salto, de resolver el problema a entender la máquina que lo evalúa, es básicamente el mismo instinto que me llevó a meterme con smart contracts y con todo lo que tenga una capa de "reglas" para explorar por debajo.
+Se logro el propósito y se gano el Pydle en 0 caracteres. Encararlo pensando fuera de las reglas preestablecidas fue lo más entretenido. Lamentablemente lograr esto volvio el juego que estaba disfrutando en algo aburrido.
