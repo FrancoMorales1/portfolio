@@ -8,9 +8,6 @@ export default function Header() {
           <span className="text-xl font-bold">Inicio</span>
         </Link>
         <nav className="flex items-center gap-6">
-          <Link href="/#about" className="text-sm font-medium transition-colors hover:text-primary">
-            Sobre mí
-          </Link>
           <Link href="/#experience" className="text-sm font-medium transition-colors hover:text-primary">
             Experiencia
           </Link>

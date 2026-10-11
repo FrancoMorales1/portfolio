@@ -6,19 +6,14 @@ import { GraduationCap, Award, ExternalLink } from "lucide-react"
 export default function EducationSection() {
   const certifications = [
     {
-      issuer: "ETH Kipu",
-      name: "Ethereum Developer Pack",
-      link: "https://campus.ethkipu.org/pluginfile.php/1/tool_certificate/issues/1764790656/2041290537FM.pdf",
-    },
-    {
-      issuer: "Cyfrin Updraft",
-      name: "Certification: Blockchain Basics",
-      link: "https://profiles.cyfrin.io/u/francomorales0001/achievements/blockchain-basics",
-    },
-    {
       issuer: "Certificación de Idioma",
       name: "Certificate of Language Proficiency",
       link: "/certificates/certificate-language-proficiency.pdf",
+    },
+    {
+      issuer: "CyberAR 2026",
+      name: "Participación en el Congreso CyberAR 2026",
+      link: "https://www.cyberar.fie.undef.edu.ar/certificados/CYBERAR-2026-000234",
     }
   ]
 
@@ -40,7 +35,7 @@ export default function EducationSection() {
             <CardContent className="text-muted-foreground space-y-4">
               <p>Actualmente cursando <strong className="text-foreground">5.º año</strong> con graduación estimada en <strong className="text-foreground">2026</strong>.</p>
               <p className="italic border-l-2 border-primary/30 pl-4 py-1">
-                Tesis: &quot;Aplicación de técnicas de Deep Learning para la detección automática de vulnerabilidades en Smart Contracts sobre tecnología blockchain Ethereum.&quot;
+                Proyecto final
               </p>
               <div className="flex gap-8 pt-2">
                 <div>

@@ -1,7 +1,7 @@
 ---
-title: "De 250 a 0 caracteres: mi historia con Pydle"
+title: "De 250 a 0 caracteres: Pydle"
 date: "2026-08-23"
-excerpt: "Un juego de acertijos en Python me llevó por el camino clásico del code golf... y después por uno bastante menos clásico: hackear el propio intérprete."
+excerpt: "Mi historia intentando ganar un juego de acertijos en Python."
 ---
 
 Hace poco descubrí [Pydle](https://pydle.net), un juego de acertijos donde tenés que escribir código en Python para recrear un patrón de colores en una grilla de 5×5, usando una función única: `pydle(x, y, icono, color)`.
@@ -107,7 +107,7 @@ pydle(3, 2, "△", b)
 pydle(1, 0, "▽", a)
 ```
 
-Funcional pero para nada optimizado. El código real empezó cuando decidí dejar de escribir para mí y empezar a escribir para el contador de caracteres.
+Funcional pero para nada optimizado. El código real empezó cuando decidí empezar a escribir para el contador de caracteres.
 
 ## El desafío de los 250
 
@@ -123,19 +123,17 @@ for i, char in enumerate(s):
     pydle(i % 5, i // 5, "", v[int(char)])
 ```
 
-25 celdas, 25 dígitos, un solo bucle. Ya no había lógica que mantener, solo datos que transcribir.
-
-**Paso 2 — compresión numérica.** El siguiente paso fue preguntarme por qué seguía gastando caracteres en representar cada dígito como texto, si en el fondo era información con muy poca entropía: apenas 3 colores posibles por celda. Empaqueté las 25 celdas en un único número en base 3 y las fui extrayendo con módulo y potencias sobre la marcha:
+**Paso 2 — compresión numérica.** El siguiente paso fue preguntarme por qué seguía gastando caracteres en representar cada dígito como texto: apenas 3 colores posibles por celda. Empaqueté las 25 celdas en un único número en base 3 y las fui extrayendo con módulo y potencias sobre la marcha:
 
 ```python
 for i in range(25): pydle(i % 5, i // 5, "", ("red", "white", "green")[31519147990 // 3**i % 3])
 ```
 
-Una sola línea. Un entero gigante haciendo de estructura de datos. En ese punto ya no estaba resolviendo el acertijo, estaba comprimiéndolo.
+Una sola línea. Un entero gigante haciendo de estructura de datos..
 
 ## Cuando dejé de resolver el acertijo y empecé a resolver el intérprete
 
-No me parecía suficiente aun. Quería completar el puzzle en "0 caracteres". Entonces noté algo: el script se ejecutaba de forma demasiado fluida en el navegador para estar viajando a un servidor. Eso significaba que el intérprete de Python corría **localmente**, en el cliente.
+No me parecía suficiente aun. Quería completar el puzzle en literalmente la menor cantidad de caracteres posibles "0 caracteres". Entonces noté algo: el script se ejecutaba de forma demasiado fluida en el navegador para estar viajando a un servidor. Eso significaba que el intérprete de Python corría **localmente**, en el cliente.
 
 Si el intérprete vive en mi navegador, ¿por qué limitarme a escribirle instrucciones? ¿Y si en cambio modificaba el entorno de ejecución para que resolviera el acertijo de forma implícita?
 

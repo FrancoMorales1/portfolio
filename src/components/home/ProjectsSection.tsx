@@ -7,25 +7,11 @@ import { ExternalLink, Github } from "lucide-react"
 
 const projects = [
   {
-    title: "Números Quiniela",
-    description: "Página web para ver números de la Quiniela.",
-    technologies: ["Next.js", "Tailwind CSS", "Supabase"],
-    github: "https://github.com/FrancoMorales1/quiniela",
-    demo: "https://quiniela-rust.vercel.app/",
-  },
-  {
     title: "TinZip",
     description: "Página web para comprimir, encriptar y compartir archivos.",
     technologies: ["Next.js", "Tailwind CSS", "MongoDB"],
     github: "https://github.com/FrancoMorales1/TinZip",
     demo: "",
-  },
-  {
-    title: "KipuBankV3",
-    description: "Smart contract DeFi del curso de ethkipu.",
-    technologies: ["Solidity"],
-    github: "https://github.com/FrancoMorales1/KipuBankV3",
-    demo: "https://sepolia.etherscan.io/address/0x0b23726dfFbBC4E67a9dEb0Ec8aEBdb3e46fb23d",
   },
   {
     title: "Portfolio",
