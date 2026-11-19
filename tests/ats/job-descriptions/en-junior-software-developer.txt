@@ -1,0 +1,15 @@
+Title: Junior Software Developer
+We are looking for a Junior Software Developer to join our product team and build web applications used by thousands of customers.
+
+Responsibilities
+- Develop and maintain features in our web platform using TypeScript, React and Next.js.
+- Build REST APIs with Node.js and work with SQL and MongoDB databases.
+- Write unit tests and take part in code reviews using Git and GitHub.
+- Collaborate with the team in an Agile (Scrum) environment.
+
+Requirements
+- Degree in Computer Science, Computer Engineering or related field (or advanced student).
+- Knowledge of JavaScript/TypeScript and at least one backend language such as Python.
+- Familiarity with Docker and CI/CD is a plus.
+- Problem solving skills, good communication, teamwork, and willingness to learn quickly.
+- Good level of English.

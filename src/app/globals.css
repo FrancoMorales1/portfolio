@@ -1,6 +1,5 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -8,7 +7,6 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -137,5 +135,74 @@
 
   html {
     scroll-behavior: smooth;
+  }
+}
+
+/* ---------- Impresión / PDF (formato ATS: una columna, texto plano, A4) ---------- */
+@page {
+  size: A4;
+  margin: 10mm 14mm;
+}
+
+@media print {
+  :root,
+  .dark {
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.2 0.02 255);
+    --muted-foreground: oklch(0.4 0.02 255);
+    --primary: oklch(0.38 0.15 255);
+    --border: oklch(0.8 0.02 255);
+    --secondary: transparent;
+    --secondary-foreground: oklch(0.2 0.02 255);
+  }
+
+  html {
+    font-size: 9.2pt;
+    line-height: 1.32;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Texto "plano" para los parsers: el tracking, el kerning y las ligaduras (fi, fl)
+     hacen que se extraiga "P E R F I L", "T inZip" o "proﬁciency". */
+  .cv,
+  .cv * {
+    letter-spacing: 0 !important;
+    font-kerning: none;
+    font-variant-ligatures: none;
+    font-feature-settings: "kern" 0, "liga" 0, "calt" 0;
+  }
+
+  .cv .text-sm,
+  .cv .text-xs {
+    font-size: 9.2pt;
+    line-height: 1.32;
+  }
+
+  /* Chips de tecnologías -> lista separada por comas (texto lineal para el parser). */
+  .cv .tag-list {
+    display: inline;
+  }
+  .cv .tag {
+    display: inline;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    color: inherit;
+    font-size: inherit;
+  }
+  .cv .tag:not(:last-child)::after {
+    content: ", ";
+  }
+
+  .cv-entry {
+    break-inside: avoid;
+  }
+  .cv-section h2 {
+    break-after: avoid;
   }
 }

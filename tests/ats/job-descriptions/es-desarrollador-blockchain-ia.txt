@@ -1,0 +1,15 @@
+Título: Desarrollador Blockchain e IA Jr
+Startup de ciberseguridad busca perfil junior para auditoría automatizada de smart contracts.
+
+Responsabilidades
+- Investigar y desarrollar modelos de Deep Learning y Machine Learning para detectar vulnerabilidades en smart contracts de Ethereum.
+- Implementar los modelos en Python con PyTorch o TensorFlow.
+- Analizar contratos escritos en Solidity y construir herramientas de seguridad.
+- Integrar los modelos en servicios con Docker y APIs REST.
+
+Requisitos
+- Estudiante avanzado de Ingeniería en Informática o afines.
+- Python, Git, conocimientos de blockchain y Ethereum.
+- Deseable: Solidity, NLP, Linux.
+- Autonomía, resolución de problemas, capacidad de aprendizaje y adaptabilidad.
+- Inglés técnico avanzado.
