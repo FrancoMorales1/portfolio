@@ -1,0 +1,16 @@
+Título: Desarrollador de Software Jr
+Buscamos un Desarrollador de Software Jr para sumarse a nuestro equipo de producto en modalidad remota.
+
+Responsabilidades
+- Desarrollar funcionalidades web con JavaScript, TypeScript, React y Next.js.
+- Construir servicios backend con Node.js y APIs REST.
+- Modelar y consultar bases de datos relacionales (SQL) y MongoDB.
+- Versionar código con Git y GitHub, escribir tests y participar de revisiones de código.
+- Automatización de procesos internos.
+
+Requisitos
+- Estudiante avanzado o graduado de Ingeniería en Informática, Sistemas o afines.
+- Conocimientos de Python, HTML y CSS (Tailwind es un plus).
+- Deseable: Docker, Linux y metodologías ágiles (Scrum).
+- Trabajo en equipo, resolución de problemas, comunicación y capacidad de aprendizaje.
+- Inglés intermedio o superior.

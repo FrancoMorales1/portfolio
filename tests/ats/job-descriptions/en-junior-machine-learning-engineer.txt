@@ -1,0 +1,15 @@
+Title: Junior Machine Learning Engineer
+Join our AI team to design, train and deploy machine learning models that power our security products.
+
+Responsibilities
+- Train and evaluate deep learning models with PyTorch.
+- Prepare datasets and pipelines with Python, NumPy and Pandas.
+- Research new techniques for vulnerability and anomaly detection.
+- Package and deploy models with Docker on AWS; version code with Git.
+
+Requirements
+- Advanced student or graduate in Computer Engineering, Computer Science or similar.
+- Solid knowledge of Python, machine learning and deep learning fundamentals.
+- Experience with PyTorch or TensorFlow; scikit-learn is a plus.
+- SQL and Linux knowledge.
+- Strong problem solving, communication and ability to learn quickly. Fluent English.
